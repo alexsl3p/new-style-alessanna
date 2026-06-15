@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlesSanna Ilusalong — Pärnu</title>
+  <meta name="description"
+        content="AlesSanna Ilusalong Pärnus — keeruline juuksevärvimine, balayage, hooldus ja stiil. Ruum, kus ilu hingab rahulikult." />
+  <meta name="theme-color" content="#1a1410" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="AlesSanna Ilusalong" />
+  <meta property="og:description" content="Ruum, kus ilu hingab rahulikult." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Three.js via import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <div id="loader" aria-hidden="true">
+    <span class="loader__mark">AS</span>
+  </div>
+
+  <header class="header" id="header">
+    <a href="#hero" class="brand" aria-label="AlesSanna Ilusalong">
+      <span class="brand__mark">AlesSanna</span>
+      <span class="brand__sub" data-i18n="brand.sub">Ilusalong · Pärnu</span>
+    </a>
+
+    <nav class="nav" aria-label="Põhinavigatsioon">
+      <a href="#services" data-i18n="nav.services">Teenused</a>
+      <a href="#masters" data-i18n="nav.masters">Meistrid</a>
+      <a href="#about" data-i18n="nav.about">Salongist</a>
+      <a href="#products" data-i18n="nav.products">Tooted</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Keel">
+        <button data-lang="et" class="is-active">ET</button>
+        <button data-lang="ru">RU</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#contact" class="btn btn--ghost" data-i18n="nav.book">Broneeri</a>
+      <button class="burger" id="burger" aria-label="Menüü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#services" data-i18n="nav.services">Teenused</a>
+    <a href="#masters" data-i18n="nav.masters">Meistrid</a>
+    <a href="#about" data-i18n="nav.about">Salongist</a>
+    <a href="#products" data-i18n="nav.products">Tooted</a>
+    <a href="#gift" data-i18n="nav.gift">Kinkekaart</a>
+    <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+  </div>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__inner reveal">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Ilusalong Pärnus</p>
+        <h1 class="hero__title">
+          <span data-i18n="hero.title1">Ruum, kus ilu</span><br />
+          <em data-i18n="hero.title2">hingab rahulikult</em>
+        </h1>
+        <p class="hero__lead" data-i18n="hero.lead">
+          Keeruline värvimine, balayage ja hooldus — täpsuse, hoolega
+          ja kiirustamata. Sinu loomulik ilu, esile toodud.
+        </p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--solid" data-i18n="hero.cta1">Broneeri aeg</a>
+          <a href="#services" class="btn btn--line" data-i18n="hero.cta2">Vaata teenuseid</a>
+        </div>
+      </div>
+      <a href="#services" class="hero__scroll" aria-label="Keri alla">
+        <span data-i18n="hero.scroll">Keri</span>
+      </a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Balayage</span><span>·</span><span>Air Touch</span><span>·</span>
+        <span>Blond</span><span>·</span><span>Hooldus</span><span>·</span>
+        <span>Stiil</span><span>·</span><span>Henna</span><span>·</span>
+        <span>Balayage</span><span>·</span><span>Air Touch</span><span>·</span>
+        <span>Blond</span><span>·</span><span>Hooldus</span><span>·</span>
+        <span>Stiil</span><span>·</span><span>Henna</span><span>·</span>
+      </div>
+    </div>
+
+    <section class="section services" id="services">
+      <div class="section__head reveal">
+        <p class="kicker" data-i18n="services.kicker">Teenused</p>
+        <h2 data-i18n="services.title">Mida me loome</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3 data-i18n="services.s1.t">Keeruline värvimine</h3>
+          <p data-i18n="services.s1.d">Balayage, blondeerimine ja mitmetasandiline värvimine —
+            pehmed üleminekud, mis kasvavad ilusti välja.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">02</span>
+          <h3 data-i18n="services.s2.t">Hooldus ja taastamine</h3>
+          <p data-i18n="services.s2.d">Süvahooldused juuste tugevuse ja sära taastamiseks
+            professionaalse MAVE seeriaga.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">03</span>
+          <h3 data-i18n="services.s3.t">Lõikus ja stiil</h3>
+          <p data-i18n="services.s3.d">Sinu näojoontele ja elurütmile kohandatud kuju ja
+            soeng — lihtne hooldada.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">04</span>
+          <h3 data-i18n="services.s4.t">Henna tätoveering <em class="tag" data-i18n="services.new">uus</em></h3>
+          <p data-i18n="services.s4.d">Ajutine looduslik kunst nahale — õrnad mustrid
+            erilisteks hetkedeks.</p>
+        </article>
+      </div>
+      <p class="note reveal" data-i18n="services.note">
+        Hinnad sõltuvad juuste pikkusest ja seisukorrast. Täpse hinnapakkumise
+        saad tasuta konsultatsioonil.
+      </p>
+    </section>
+
+    <section class="section masters" id="masters">
+      <div class="section__head reveal">
+        <p class="kicker" data-i18n="masters.kicker">Meistrid</p>
+        <h2 data-i18n="masters.title">Käed, mida usaldada</h2>
+      </div>
+      <div class="masters__grid">
+        <article class="master reveal">
+          <div class="master__photo" data-initials="N"></div>
+          <div class="master__body">
+            <h3>Natalja</h3>
+            <p class="master__role" data-i18n="masters.m1.role">Värvimeister · kolorist</p>
+            <p data-i18n="masters.m1.d">Spetsialiseerunud keerukale värvimisele ja blondidele.
+              Loob tooni, mis sobib just sinuga.</p>
+            <a href="https://instagram.com/natali.kolorist" target="_blank" rel="noopener"
+               class="master__ig">@natali.kolorist</a>
+          </div>
+        </article>
+        <article class="master reveal">
+          <div class="master__photo" data-initials="AS"></div>
+          <div class="master__body">
+            <h3>AlesSanna</h3>
+            <p class="master__role" data-i18n="masters.m2.role">Salong · hooldus ja stiil</p>
+            <p data-i18n="masters.m2.d">Hooldused, lõikused ja stiil rahulikus õhkkonnas,
+              kus iga külastus on hingetõmme.</p>
+            <a href="https://instagram.com/alessanna.ilusalong" target="_blank" rel="noopener"
+               class="master__ig">@alessanna.ilusalong</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p class="kicker" data-i18n="about.kicker">Salongist</p>
+          <h2 data-i18n="about.title">Ilu ei kiirusta</h2>
+          <p data-i18n="about.p1">AlesSanna on koht, kus ilu sünnib rahus. Me ei kiirusta —
+            me kuulame, hoolitseme ja loome tulemuse, mis tundub sinu omana.</p>
+          <p data-i18n="about.p2">Härma Keskuses Pärnus ootab sind valgusküllane ja vaikne
+            ruum, professionaalsed tooted ja meister, kes märkab detaile.</p>
+          <ul class="about__list">
+            <li data-i18n="about.l1">Tasuta parkimine läheduses</li>
+            <li data-i18n="about.l2">Professionaalsed MAVE tooted</li>
+            <li data-i18n="about.l3">Individuaalne lähenemine</li>
+          </ul>
+        </div>
+        <div class="about__stats reveal">
+          <div class="stat"><span class="stat__n">10+</span><span class="stat__l" data-i18n="about.stat1">aastat kogemust</span></div>
+          <div class="stat"><span class="stat__n">100%</span><span class="stat__l" data-i18n="about.stat2">looduslik värvitulemus</span></div>
+          <div class="stat"><span class="stat__n">★</span><span class="stat__l" data-i18n="about.stat3">soovitatud klientide poolt</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="section__head reveal">
+        <p class="kicker" data-i18n="products.kicker">Tooted</p>
+        <h2 data-i18n="products.title">Hoolitsus, mis jätkub kodus</h2>
+      </div>
+      <div class="cards cards--two">
+        <article class="card reveal">
+          <h3>MAVE</h3>
+          <p data-i18n="products.p1">Professionaalne juuksehoolduse seeria — sära, niiskus ja
+            kaitse iga päev.</p>
+        </article>
+        <article class="card reveal">
+          <h3>YODEYMA</h3>
+          <p data-i18n="products.p2">Niši parfüümid, mis viimistlevad sinu kuvandi peenelt ja
+            kauakestvalt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gift" id="gift">
+      <div class="gift__card reveal">
+        <div>
+          <p class="kicker" data-i18n="gift.kicker">Kinkekaart</p>
+          <h2 data-i18n="gift.title">Kingi ilu hetk</h2>
+          <p data-i18n="gift.d">AlesSanna kinkekaart on hooliv kingitus igaks puhuks —
+            vali summa ja lase lähedasel ennast hellitada.</p>
+        </div>
+        <a href="#contact" class="btn btn--solid" data-i18n="gift.cta">Küsi kinkekaarti</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="kicker" data-i18n="contact.kicker">Kontakt</p>
+          <h2 data-i18n="contact.title">Broneeri oma aeg</h2>
+          <p class="contact__note" data-i18n="contact.note">Veebibroneerimine on hetkel pausil.
+            Helista või kirjuta — leiame sulle sobiva aja hea meelega.</p>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__lbl" data-i18n="contact.addr">Aadress</span>
+              <a href="https://maps.google.com/?q=Tallinna+mnt+70+Pärnu" target="_blank" rel="noopener">
+                Härma Keskus, Tallinna mnt 70, Pärnu 80034</a>
+            </li>
+            <li>
+              <span class="contact__lbl" data-i18n="contact.phone">Telefon</span>
+              <a href="tel:+3725298225">+372 529 8225</a>
+            </li>
+            <li>
+              <span class="contact__lbl" data-i18n="contact.email">E-post</span>
+              <a href="mailto:alessanna.ilusalong@gmail.com">alessanna.ilusalong@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact__lbl" data-i18n="contact.hours">Lahtiolek</span>
+              <span><span data-i18n="contact.hours1">E–R 10:00–18:00</span><br /><span data-i18n="contact.hours2">L 10:00–16:00</span></span>
+            </li>
+          </ul>
+          <div class="contact__social">
+            <a href="https://instagram.com/alessanna.ilusalong" target="_blank" rel="noopener">Instagram</a>
+            <a href="tel:+3725298225" data-i18n="contact.call">Helista</a>
+            <a href="https://wa.me/3725298225" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <form class="contact__form reveal" id="contact-form" novalidate>
+          <label>
+            <span data-i18n="form.name">Nimi</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            <span data-i18n="form.phone">Telefon</span>
+            <input type="tel" name="phone" required autocomplete="tel" />
+          </label>
+          <label>
+            <span data-i18n="form.msg">Soov / küsimus</span>
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <button type="submit" class="btn btn--solid" data-i18n="form.send">Saada päring</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="brand__mark">AlesSanna</span>
+      <p>© <span id="year"></span> AlesSanna Ilusalong · Pärnu, Eesti</p>
+      <a href="#hero" data-i18n="footer.top">Üles ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/scene.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
